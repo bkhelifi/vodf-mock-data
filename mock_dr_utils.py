@@ -81,7 +81,7 @@ def create_event_hdu(obs_id, coord, nentries=3, evt_type_list=None, evt_class_li
 def create_gti_hdu(obs_id, ob_id=None):
     gti = Table(names=("START","STOP"))
     gti.add_row([60760, 60760.5])
-    gti.add_row([60760.5, 60761])
+    gti.add_row([60760.7, 60761.2])
     hdu_gti = fits.BinTableHDU(data=gti)
 
     hdr = hdu_gti.header

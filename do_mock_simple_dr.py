@@ -59,7 +59,7 @@ def create_irf_file(filename, obs_id):
 def create_grouping_table(irffilename, obs_id):
     xtension = ['BINTABLE', 'BINTABLE', 'BINTABLE', 'BINTABLE', 'BINTABLE']
     name = ['EVENTS', 'EFFECTIVE AREA', 'ENERGY DISPERSION', 'POINT SPREAD FUNCTION', 'BACKGROUND', 'GTI']
-    loc = ['null', irffilename, irffilename, irffilename, irffilename, 'null']
+    loc = ['NULL', irffilename.name, irffilename.name, irffilename.name, irffilename.name, 'NULL']
     uri = ['URL', 'URL', 'URL', 'URL', 'URL', 'URL']
 
     col1 = fits.Column(name='MEMBER_XTENSION', format='8A', array=xtension)
