@@ -60,7 +60,7 @@ def create_grouping_table(irffilename, obs_id, evt_type, ob_id=None):
     xtension = ['BINTABLE', 'BINTABLE', 'BINTABLE', 'BINTABLE', 'BINTABLE']
     name = ['EVENTS', 'EFFECTIVE AREA '+evt_type, 'ENERGY DISPERSION '+evt_type,
             'POINT SPREAD FUNCTION '+evt_type, 'BACKGROUND '+evt_type, 'GTI']
-    loc = ['null', irffilename, irffilename, irffilename, irffilename, 'null']
+    loc = ['NULL', irffilename.name, irffilename.name, irffilename.name, irffilename.name, 'NULL']
     uri = ['URL', 'URL', 'URL', 'URL', 'URL', 'URL']
     sel_type = ['none', evt_type, evt_type, evt_type, evt_type, 'none']
 

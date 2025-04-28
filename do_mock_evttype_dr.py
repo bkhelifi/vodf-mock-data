@@ -61,14 +61,14 @@ def create_irf_file(filename, obs_id, evt_type_list):
 def create_grouping_table(irffilename, obs_id, evt_type_list):
     xtension = ['BINTABLE', 'BINTABLE']
     name = ['EVENTS', 'GTI']
-    loc = ['null', 'null']
+    loc = ['NULL', 'NULL']
     uri = ['URL', 'URL']
     sel_type = ['none', 'none']
     for evt_type in evt_type_list:
         for irf in ['EFFECTIVE AREA ', 'ENERGY DISPERSION ', 'POINT SPREAD FUNCTION ', 'BACKGROUND ']:
             xtension.append('BINTABLE')
             name.append(irf + evt_type)
-            loc.append(irffilename)
+            loc.append(irffilename.name)
             uri.append('URL')
             sel_type.append(evt_type)
 
